@@ -119,6 +119,11 @@ func (r *Request) Do() error {
 	return nil
 }
 
+//GetResponse get response
+func (r *Request) GetResponse() *http.Response {
+	return r.response
+}
+
 // GetBody get response body
 func (r *Request) GetBody() ([]byte, error) {
 	defer func(Body io.ReadCloser) {
